@@ -43,7 +43,7 @@ body {
     padding-bottom: 10rem;
 }
 
-@media (orientation: landscape) {
+@media (max-width: 768px) and (orientation: landscape) {
     .root {
         padding-top: 3rem;
     }

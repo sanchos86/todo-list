@@ -5,9 +5,8 @@ import PropTypes from 'prop-types';
 const StyledDeleteIcon = styled.div.attrs({
   title: 'Delete todo'
 })`
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  line-height: 2.8125rem;
+  text-align: center;
   width: 3.6875rem;
   height: 3.6875rem;
   margin-left: 0.75rem;
