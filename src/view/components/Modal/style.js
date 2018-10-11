@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { darken } from 'polished';
 
 export const Overlay = styled.div`
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -54,7 +54,7 @@ export const TextArea = styled.textarea.attrs({
 })`
   display: block;
   width: 100%;
-  height: 200px;
+  height: 12.5rem;
   padding: 15px;
   resize: none;
   border: 1px solid #3e434f;
@@ -75,12 +75,12 @@ export const ModalFooter = styled.div`
 export const Button = styled.button.attrs({
   type: props => props.isSubmit ? 'submit' : 'button'
 })`
-  margin-left: 15px;
+  margin-left: 0.75rem;
   background-color: ${props => props.isSubmit ? '#50e3a4' : '#eef0f5'};
   color: ${props => props.isSubmit ? '#fff' : '#3e434f'};
   border: 0;
   border-radius: 3px;
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   cursor: pointer;
   transition: .15s background-color ease-in-out;
   &:hover {

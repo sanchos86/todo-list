@@ -24,15 +24,17 @@ const days = [
 ];
 
 /**
- * @returns {string} - name of the current week day
+ * @param {object} date - target date
+ * @returns {string} - name of the week day
  */
-export const getDayName = () => {
-  return days[new Date().getDay()];
+export const getDayName = (date) => {
+  return days[date.getDay()];
 };
 
 /**
- * @returns {string} - short name of the current month
+ * @param {object} date - target date
+ * @returns {string} - short name of the month
  */
-export const getMonthShortName = () => {
-  return months[new Date().getMonth()].slice(0, 3);
+export const getMonthShortName = (date) => {
+  return months[date.getMonth()].slice(0, 3);
 };

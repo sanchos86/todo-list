@@ -8,7 +8,7 @@ import Modal from '../Modal';
 
 class App extends React.Component {
   state = {
-    isModalOpened: true,
+    isModalOpened: false,
     text: '',
     error: false
   };

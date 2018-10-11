@@ -1,4 +1,5 @@
 import types from './types';
+import uuid from 'uuid/v1';
 
 const todos = (state = [], action) => {
   switch (action.type) {
@@ -6,17 +7,18 @@ const todos = (state = [], action) => {
       return [
         ...state,
         {
+          id: uuid(),
           text: action.text,
           completed: false
         }
       ];
     case types.TODO_DELETE:
-      return state.filter((todo, index) => {
-        return index !== action.id;
+      return state.filter((todo) => {
+        return todo.id !== action.id;
       });
     case types.TODO_TOGGLE:
-      return state.map((todo, index) => {
-        if (index === action.id) {
+      return state.map((todo) => {
+        if (todo.id === action.id) {
           return { ...todo, completed: !todo.completed };
         }
         return todo;
